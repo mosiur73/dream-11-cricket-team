@@ -34,6 +34,11 @@ function App() {
     setClimes(climes + 50000)
     
   }
+
+  // const handleDeletePrice=(id) =>{
+  //   const newPrice=selectPlayer.find((player) =>player.id !=id)
+  //   setClimes(climes - newPrice.price)
+  // }
   
   const handleSelectPlayer=(player)=>{
     if(climes <player.price){
@@ -41,11 +46,21 @@ function App() {
     }else{
       const newPlayers=[...selectPlayer,player]
       setSelectPlayer(newPlayers)
+     
     }
-    
-    
+      
+  }
+
+  
+
+  const handlePlayerDelete=(id)=>{
+  
+   const remainingPlayer=selectPlayer.filter((p)=>p.id !=id)
+    setSelectPlayer(remainingPlayer)
     
   }
+
+ 
  
 
   
@@ -62,6 +77,7 @@ function App() {
     handleSelectPlayer={handleSelectPlayer}
     isActive={isActive}
     selectPlayer={selectPlayer}
+    handlePlayerDelete={handlePlayerDelete}
     ></AllPlayers>
     <Footer></Footer>
       

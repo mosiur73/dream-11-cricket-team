@@ -1,6 +1,6 @@
 import { MdDelete } from "react-icons/md";
 
-const SelectedCart = ({selectPlayer}) => {
+const SelectedCart = ({selectPlayer,handlePlayerDelete}) => {
 
     
     return (
@@ -18,7 +18,7 @@ const SelectedCart = ({selectPlayer}) => {
                                     <h4>{player.role}</h4>
                                 </div>
                             </div>
-                            <button className="pr-10 text-3xl text-orange-500"><MdDelete  /></button>
+                            <button onClick={()=>handlePlayerDelete(player.id)} className="pr-10 text-3xl text-orange-500"><MdDelete  /></button>
                            
 
                         </div>

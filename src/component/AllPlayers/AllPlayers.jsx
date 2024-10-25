@@ -2,7 +2,7 @@ import AvailableCart from '../Availablecart/AvailableCart';
 import SelectedCart from '../SelectedCart/SelectedCart';
 import './AllPlayers.css'
 
-const AllPlayers = ({handleIsActiveState,isActive,handleSelectPlayer,selectPlayer}) => {
+const AllPlayers = ({handleIsActiveState,isActive,handleSelectPlayer,selectPlayer,handlePlayerDelete}) => {
     
     
     return (
@@ -13,7 +13,7 @@ const AllPlayers = ({handleIsActiveState,isActive,handleSelectPlayer,selectPlaye
            </div>
                {
                 isActive.cart?<AvailableCart handleSelectPlayer={handleSelectPlayer}></AvailableCart>:
-                <SelectedCart selectPlayer={selectPlayer}></SelectedCart>
+                <SelectedCart selectPlayer={selectPlayer} handlePlayerDelete={handlePlayerDelete}></SelectedCart>
                 
             }
           
