@@ -9,9 +9,11 @@ const AllPlayers = ({handleIsActiveState,isActive}) => {
             <button onClick={()=>handleIsActiveState('cart')} className={`${isActive.cart?"btn active" :"btn"}`}>Available</button>
             <button onClick={()=>handleIsActiveState('about')} className={`${isActive.cart?"btn " :"btn active"}`}>Selected (0)</button>
            </div>
-
-           <AvailableCart></AvailableCart>
-           <SelectedCart></SelectedCart>
+               {
+                isActive.cart?<AvailableCart></AvailableCart>:
+                <SelectedCart></SelectedCart>
+               }
+           
         </div>
     );
 };

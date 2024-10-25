@@ -40,6 +40,7 @@ function App() {
     
     <Navbar climes={climes}></Navbar>
     <Banner handleclimes={handleclimes}></Banner>
+    
     <AllPlayers
     handleIsActiveState={handleIsActiveState}
     isActive={isActive}
