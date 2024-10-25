@@ -6,7 +6,7 @@
       "batting_style": "Right-hand bat",
       "country": "Australia",
       "rating": 87,
-      "price": 500000,
+      "price": 5000,
       "img": "https://i.ibb.co.com/7VybSNv/portrait-person-playing-cricket-sport.jpg"
     },
     { "id":2,
@@ -15,7 +15,7 @@
       "batting_style": "Left-hand bat",
       "country": "India",
       "rating": 92,
-      "price": 600000,
+      "price": 60000,
       "img": "https://i.ibb.co.com/QcWsC2C/cricket-match-with-player-5.jpg"
     },
     { "id":3,
@@ -24,7 +24,7 @@
       "batting_style": "Right-hand bat",
       "country": "England",
       "rating": 85,
-      "price": 550000,
+      "price": 55981,
       "img": "https://i.ibb.co.com/CmNkM3N/cricket-match-with-player-4.jpg"
     },
     { "id":4,
@@ -33,7 +33,7 @@
       "batting_style": "Right-hand bat",
       "country": "India",
       "rating": 80,
-      "price": 400000,
+      "price": 40333,
       "img": "https://i.ibb.co.com/cX07XG3/cricket-match-with-player-4.jpg"
     },
     { "id":5,
@@ -42,7 +42,7 @@
       "batting_style": "Left-hand bat",
       "country": "South Africa",
       "rating": 90,
-      "price": 700000,
+      "price": 40980,
       "img": "https://i.ibb.co.com/svxLZB3/cricket-match-with-player-2.jpg"
     },
     { "id":6,
@@ -51,7 +51,7 @@
       "batting_style": "Right-hand bat",
       "country": "Pakistan",
       "rating": 88,
-      "price": 450000,
+      "price": 45000,
       "img": "https://i.ibb.co.com/WsF2nwb/cricket-match-with-player-1.jpg"
     }
   ]

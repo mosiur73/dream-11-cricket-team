@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ShowPlayers from '../ShowPlayers/ShowPlayers';
 
-const AvailableCart = () => {
+const AvailableCart = ({handleSelectPlayer}) => {
     const [players,setPlayers]=useState([])
 
     useEffect( ()=>{
@@ -14,7 +14,7 @@ const AvailableCart = () => {
             <h2 className='text-2xl font-bold flex justify-start'>Available Cart</h2>
            <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
            {
-                players.map(player => <ShowPlayers key={player.id} player={player}></ShowPlayers>)
+            players.map(player => <ShowPlayers key={player.id} player={player} handleSelectPlayer={handleSelectPlayer}></ShowPlayers>)
             }
            </div>
         </div>

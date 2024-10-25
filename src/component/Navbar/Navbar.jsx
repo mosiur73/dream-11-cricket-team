@@ -19,7 +19,7 @@ const Navbar = ({climes}) => {
                 <h3>Fixture</h3>
                 <h3>Team</h3>
                 <h3>Schedules</h3>
-                <button className='flex items-center btn'>{climes} coin <FaBitcoin /></button>
+                <button className='flex items-center btn'>{climes} coin <FaBitcoin className='text-orange-600' /></button>
             </div>
            </div>
           

@@ -8,6 +8,7 @@ import Banner from './component/Banner/Banner'
 
 function App() {
   const [climes,setClimes]=useState(0)
+  const [selectPlayer,setSelectPlayer]=useState([])
   const [isActive,setIsActive]=useState({
     cart:"true",
     status:"active"
@@ -29,8 +30,23 @@ function App() {
   }
 
   const handleclimes=()=>{
+
     setClimes(climes + 50000)
+    
   }
+  
+  const handleSelectPlayer=(player)=>{
+    if(climes <player.price){
+      alert('your money is not enough')
+    }else{
+      const newPlayers=[...selectPlayer,player]
+      setSelectPlayer(newPlayers)
+    }
+    
+    
+    
+  }
+ 
 
   
   
@@ -40,10 +56,12 @@ function App() {
     
     <Navbar climes={climes}></Navbar>
     <Banner handleclimes={handleclimes}></Banner>
-    
+
     <AllPlayers
     handleIsActiveState={handleIsActiveState}
+    handleSelectPlayer={handleSelectPlayer}
     isActive={isActive}
+    selectPlayer={selectPlayer}
     ></AllPlayers>
     <Footer></Footer>
       

@@ -1,8 +1,8 @@
 import { FaUser } from "react-icons/fa";
 import { CiFlag1 } from "react-icons/ci";
 
-const ShowPlayers = ({player}) => {
-    console.log(player);
+const ShowPlayers = ({player,handleSelectPlayer}) => {
+    
     const {name,role,batting_style,country,rating,price,img}=player
     
     
@@ -23,7 +23,7 @@ const ShowPlayers = ({player}) => {
     <h4 className="flex justify-start font-medium">{batting_style}</h4>
     <div className="card-actions justify-between items-center">
       <h4>price:{price}</h4>
-      <button className="btn">Chose player</button>
+      <button onClick={()=>handleSelectPlayer(player)} className="btn">Chose player</button>
     </div>
   </div>
 </div>
