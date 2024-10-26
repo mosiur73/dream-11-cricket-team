@@ -26,6 +26,7 @@ const SelectedCart = ({selectPlayer,handlePlayerDelete}) => {
                     </div>
                 ))
             }
+            <button className='bg-[#E7FE29] p-3 rounded-xl font-bold btn-outline btn m-6 flex justify-start'>Add more Player</button>
         </div>
     );
 };

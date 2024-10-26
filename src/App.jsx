@@ -1,6 +1,8 @@
 
 import { useState } from 'react'
 import './App.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AllPlayers from './component/AllPlayers/AllPlayers'
 import Footer from './component/Footer/Footer'
 import Navbar from './component/Navbar/Navbar'
@@ -32,6 +34,7 @@ function App() {
   const handleclimes=()=>{
 
     setClimes(climes + 50000)
+    toast('Credit Added your Account')
     
   }
 
@@ -39,26 +42,28 @@ function App() {
     const newPrice=selectPlayer.find((player) =>player.id !=id)
     setClimes(climes - newPrice.price)
   }
-  
+ 
   const handleSelectPlayer=(player)=>{
     const isexist=selectPlayer.find((p) =>p.id ==player.id);
     if(climes < player.price && isexist){
-      alert('your money is not enough and this payer is already added')
+      toast('your money is not enough and this payer is already added')
       return
     }
     if(climes <player.price){
-      alert('your money is not enough')
+      toast('your money is not enough')
       return
     }
     if(isexist){
-      alert('this player is already added')
+      toast(' Player  already Selected')
+      
     }
     
     else{
-      
+      toast('Congrates.Added the player')
       const newPlayers=[...selectPlayer,player]
       setSelectPlayer(newPlayers)
-      handleDeletePrice( player)
+      handleDeletePrice(player)
+     
      
     }
       
@@ -70,6 +75,7 @@ function App() {
     
    const remainingPlayer=selectPlayer.filter((p)=>p.id !=id)
     setSelectPlayer(remainingPlayer)
+    toast('Player removed')
     
   }
 
@@ -84,6 +90,7 @@ function App() {
     
     <Navbar climes={climes}></Navbar>
     <Banner handleclimes={handleclimes}></Banner>
+    <ToastContainer />
 
     <AllPlayers
     handleIsActiveState={handleIsActiveState}

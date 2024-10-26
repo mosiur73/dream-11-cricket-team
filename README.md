@@ -1,8 +1,24 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1.Project Name:Assignment7-bpl-player-selected
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2.
+
+
+3.Technology used:
+     1.vite
+     2.react
+     3.tailwind
+     4.daisy ui
+     5.react icon
+     6.react toastify
+     7.font aowsome
+     8.surge
+     9.Netlefi
+
+4.Key Feature of Project
+    1.Player Selection and Team Creation
+    2.buy a player
+    3. Live Match Tracking and Real-Time Points Updates
+    4.Leaderboards and Rewards System
