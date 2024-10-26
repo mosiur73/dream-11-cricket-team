@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <div className='bg-[#06091A] '>
 
-            <div style={bgstyle} className='max-w-5xl h-80 rounded-xl  mx-auto -translate-y-40'>
+            <div style={bgstyle} className='max-w-5xl h-80 rounded-xl  mx-auto -translate-y-40 shadow-slate-600'>
                  <div className='pt-12 '>
                  <h3 className='text-3xl font-bold text-[#131313] text-center mb-6'>Subscribe to our Newsletter</h3>
                  <h5 className='mb-6 text-center'>Get the latest updates and news right  in your inbox!</h5>

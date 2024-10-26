@@ -35,13 +35,15 @@ function App() {
 
     setClimes(climes + 50000)
     toast('Credit Added your Account')
-    
+    console.log(climes)
   }
 
   const handleDeletePrice=(id) =>{
-    const newPrice=selectPlayer.find((player) =>player.id !=id)
-    setClimes(climes - newPrice.price)
+    
+    const newprice =id.price
+    setClimes(climes -newprice )
   }
+  
  
   const handleSelectPlayer=(player)=>{
     const isexist=selectPlayer.find((p) =>p.id ==player.id);
