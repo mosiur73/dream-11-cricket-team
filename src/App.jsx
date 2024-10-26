@@ -35,17 +35,30 @@ function App() {
     
   }
 
-  // const handleDeletePrice=(id) =>{
-  //   const newPrice=selectPlayer.find((player) =>player.id !=id)
-  //   setClimes(climes - newPrice.price)
-  // }
+  const handleDeletePrice=(id) =>{
+    const newPrice=selectPlayer.find((player) =>player.id !=id)
+    setClimes(climes - newPrice.price)
+  }
   
   const handleSelectPlayer=(player)=>{
+    const isexist=selectPlayer.find((p) =>p.id ==player.id);
+    if(climes < player.price && isexist){
+      alert('your money is not enough and this payer is already added')
+      return
+    }
     if(climes <player.price){
       alert('your money is not enough')
-    }else{
+      return
+    }
+    if(isexist){
+      alert('this player is already added')
+    }
+    
+    else{
+      
       const newPlayers=[...selectPlayer,player]
       setSelectPlayer(newPlayers)
+      handleDeletePrice( player)
      
     }
       
@@ -54,7 +67,7 @@ function App() {
   
 
   const handlePlayerDelete=(id)=>{
-  
+    
    const remainingPlayer=selectPlayer.filter((p)=>p.id !=id)
     setSelectPlayer(remainingPlayer)
     
