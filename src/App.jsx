@@ -52,16 +52,16 @@ function App() {
       return
     }
     if(climes <player.price){
-      toast('your money is not enough')
+      toast('Not enough money to buy this player Claim some Credit')
       return
     }
     if(isexist){
       toast(' Player  already Selected')
       
     }
-    
+   
     else{
-      toast('Congrates.Added the player')
+      toast('Congrates.this player Added your squad')
       const newPlayers=[...selectPlayer,player]
       setSelectPlayer(newPlayers)
       handleDeletePrice(player)

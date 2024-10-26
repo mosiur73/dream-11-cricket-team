@@ -3,7 +3,7 @@
 1.Project Name:Assignment7-bpl-player-selected
 
 
-2.
+2.Live link:https://storied-fox-83a115.netlify.app/
 
 
 3.Technology used:
