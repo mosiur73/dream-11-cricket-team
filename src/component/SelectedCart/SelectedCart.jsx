@@ -1,6 +1,7 @@
 import { MdDelete } from "react-icons/md";
+import AvailableCart from "../Availablecart/AvailableCart";
 
-const SelectedCart = ({selectPlayer,handlePlayerDelete}) => {
+const SelectedCart = ({selectPlayer,handlePlayerDelete,isActive,handleIsActiveState}) => {
 
     
     return (
@@ -26,8 +27,12 @@ const SelectedCart = ({selectPlayer,handlePlayerDelete}) => {
                     </div>
                 ))
             }
-            <button className='bg-[#E7FE29] p-3 rounded-xl font-bold btn-outline btn m-6 flex justify-start'>Add more Player</button>
+            <button onClick={()=>handleIsActiveState('cart')} className='bg-[#E7FE29] p-3 rounded-xl font-bold btn-outline btn m-6 flex justify-start'>Add more Player</button>
+            {
+              isActive.cart? <AvailableCart></AvailableCart>:""
+            }
         </div>
+
     );
 };
 

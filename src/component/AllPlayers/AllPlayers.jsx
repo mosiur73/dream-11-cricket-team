@@ -13,7 +13,9 @@ const AllPlayers = ({handleIsActiveState,isActive,handleSelectPlayer,selectPlaye
            </div>
                {
                 isActive.cart?<AvailableCart handleSelectPlayer={handleSelectPlayer}></AvailableCart>:
-                <SelectedCart selectPlayer={selectPlayer} handlePlayerDelete={handlePlayerDelete}></SelectedCart>
+                <SelectedCart selectPlayer={selectPlayer} handlePlayerDelete={handlePlayerDelete}
+            handleIsActiveState={handleIsActiveState} isActive={isActive}
+                ></SelectedCart>
                 
             }
           
